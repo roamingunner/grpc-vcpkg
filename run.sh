@@ -1,0 +1,1 @@
+ cmake -Bbuild -DVCPKG_TARGET_ARCHITECTURE=arm -DVCPKG_TARGET_TRIPLET=a0 -DCMAKE_TOOLCHAIN_FILE=/home/leo/work/vcpkg/scripts/buildsystems/vcpkg.cmake -DVCPKG_CHAINLOAD_TOOLCHAIN_FILE=/home/leo/work/vcpkg/scripts/toolchains/a0_toolchain.cmake .
