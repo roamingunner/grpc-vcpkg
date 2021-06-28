@@ -22,10 +22,10 @@ cmake_minimum_required(VERSION 3.5.1)
 # Proto file
 get_filename_component(hw_proto "helloworld.proto" ABSOLUTE)
 get_filename_component(hw_proto_path "${hw_proto}" PATH)
-set(${VCPKG_HOME} "/home/leo/work/vcpkg")
+set(VCPKG_HOME "/home/leo/work/vcpkg")
 set(PROTOC "${VCPKG_HOME}/installed/x64-linux/tools/protobuf/protoc")
 if (NOT EXISTS ${PROTOC})
-  message(FATAL_ERROR "The protoc program was not found")
+  message(FATAL_ERROR "The ${PROTOC} program was not found")
 endif()
 message(STATUS "Found protoc program: " ${PROTOC})
 
@@ -38,9 +38,9 @@ else(EXISTS ${GRPC_PLUGIN})
   message(STATUS "Found grpc_cpp_plugin : " ${GRPC_PLUGIN})
 endif()
 
-set(_PROTOBUF_LIBPROTOBUF protobuf)
-set(_REFLECTION grpc++_reflection)
-set(_GRPC_GRPCPP grpc++)
+set(_PROTOBUF_LIBPROTOBUF protobuf::libprotobuf)
+# set(_REFLECTION grpc++_reflection)
+set(_GRPC_GRPCPP gRPC::grpc++)
 
 # Generated sources
 set(hw_proto_srcs "${CMAKE_CURRENT_BINARY_DIR}/helloworld.pb.cc")
