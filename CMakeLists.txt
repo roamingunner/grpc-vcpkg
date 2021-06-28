@@ -30,6 +30,12 @@ cmake_minimum_required(VERSION 3.10)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_BUILD_TYPE Release)
 set(VCPKG_HOME "/home/leo/work/vcpkg") #IMPORTANT: change this to where your vcpkg exists.
+
+set(CMAKE_TOOLCHAIN_FILE "/home/leo/work/vcpkg/scripts/buildsystems/vcpkg.cmake")
+set(VCPKG_TARGET_TRIPLET "arm-linaro")
+set(VCPKG_CHAINLOAD_TOOLCHAIN_FILE "/home/leo/work/vcpkg/scripts/toolchains/h0.cmake")
+set(CMAKE_BUILD_TYPE "Release")
+
 project(HelloWorldMinimal)
 
 include_directories("/home/leo/work/vcpkg/installed/arm-linaro/include")

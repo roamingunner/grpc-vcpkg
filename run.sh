@@ -1,1 +1,1 @@
- cmake -Bbuild -DVCPKG_TARGET_ARCHITECTURE=arm -DVCPKG_TARGET_TRIPLET=arm-linaro -DCMAKE_TOOLCHAIN_FILE=/home/leo/work/vcpkg/scripts/buildsystems/vcpkg.cmake -DVCPKG_CHAINLOAD_TOOLCHAIN_FILE=/home/leo/work/vcpkg/scripts/toolchains/h0.cmake -DCMAKE_BUILD_TYPE=Release .
+ cmake -Bbuild -DVCPKG_TARGET_TRIPLET=arm-linaro -DCMAKE_TOOLCHAIN_FILE=/home/leo/work/vcpkg/scripts/buildsystems/vcpkg.cmake -DVCPKG_CHAINLOAD_TOOLCHAIN_FILE=/home/leo/work/vcpkg/scripts/toolchains/h0.cmake -DCMAKE_BUILD_TYPE=Release .
